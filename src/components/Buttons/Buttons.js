@@ -10,13 +10,13 @@ library.add(faPlus, faMinus, faSyncAlt);
 const Buttons = (props) => {
     return (
         <div className="buttons">
-            <button onClick={props.addPoint}>
+            <button className="btn__add" onClick={props.addPoint}>
                 <FontAwesomeIcon icon="plus" />
             </button>
-            <button onClick={props.clear}>
+            <button className="btn__clear" onClick={props.clear}>
                 <FontAwesomeIcon icon="sync-alt" />
             </button>
-            <button onClick={props.subtractPoint}>
+            <button className="btn__subtract" onClick={props.subtractPoint}>
                 <FontAwesomeIcon icon="minus" />
             </button>
         </div>
