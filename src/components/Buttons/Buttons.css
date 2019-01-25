@@ -2,25 +2,3 @@
     display: flex;
     flex-shrink: 1;
 }
-
-button {
-    flex-basis: 50%;
-    color: white;
-    padding: 20px 0;
-    font-size: 26px;
-    border: none;
-    cursor: pointer;
-}
-
-.btn__add {
-    background-color: green;
-}
-
-.btn__clear {
-    background-color: #ffa812;
-    color: black;
-}
-
-.btn__subtract {
-    background-color: #d81305;
-}

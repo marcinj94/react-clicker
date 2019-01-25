@@ -4,7 +4,8 @@ const TotalClicks = (props) => {
 
     const style = {
         textAlign: 'center',
-        fontSize: '30px'
+        fontSize: '30px',
+        paddingBottom: '10px'
     }
 
     return (

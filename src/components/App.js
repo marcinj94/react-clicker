@@ -31,13 +31,9 @@ class App extends Component {
     }))
   }
 
-
-
-
   render() {
 
     const allClicks = this.state.totalClick > 0 ? <TotalClicks totalClick={this.state.totalClick} /> : null;
-
     return (
       <>
         <Header />
