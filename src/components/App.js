@@ -1,36 +1,45 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './Header/Header'
-
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faMinus, faSyncAlt } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faPlus, faMinus, faSyncAlt);
-
+import Header from './Header/Header';
+import Clicker from './Clicker/Clicker';
 
 class App extends Component {
+
+  state = {
+    result: 0,
+  }
+
+  handleAddPoint = () => {
+    this.setState(prevState => ({
+      result: prevState.result + 1,
+    }))
+  }
+
+  handleSubtractPoint = () => {
+    this.setState(prevState => ({
+      result: prevState.result - 1,
+    }))
+  }
+
+  handleClearResult = () => {
+    this.setState(prevState => ({
+      result: 0,
+    }))
+  }
+
+
+
+
   render() {
     return (
       <div className="Clicker">
         <Header />
-
-        <div className="clicker">
-          <div className="result">
-            <span>0</span>
-          </div>
-          <div className="buttons">
-            <button><FontAwesomeIcon icon="plus" /></button>
-            <button><FontAwesomeIcon icon="minus" /></button>
-            <button><FontAwesomeIcon icon="sync-alt" /></button>
-          </div>
-        </div>
-
-
-        {/* <FontAwesomeIcon icon="plus" />
-          <FontAwesomeIcon icon="minus" />
-
-          <FontAwesomeIcon icon="sync-alt" /> */}
+        <Clicker
+          result={this.state.result}
+          plusHandle={this.handleAddPoint}
+          minusHandle={this.handleSubtractPoint}
+          refreshHandle={this.handleClearResult}
+        />
       </div >
     );
   }
